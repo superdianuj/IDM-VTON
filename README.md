@@ -1,5 +1,5 @@
 
-<h1>IDM-VTON: Trying on Garments on Image of Person directly from Shopping Site URL </h1>
+<h1>IDM-VTON: Virtual trying on Garments on Image of Person directly from Shopping Site URL </h1>
 
 
 ## Setup
