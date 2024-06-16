@@ -5,7 +5,7 @@
 ## Setup
 
 ```bash
-git clone --recursive https://github.com/superdianuj/IDM-VTON.git
+git clone --recursive https://github.com/superdianuj/shopping_site_tryon.git
 cd IDM-VTON
 
 conda env create -f environment.yaml
