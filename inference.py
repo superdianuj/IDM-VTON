@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 from typing import Any, Callable, Dict, List, Optional, Tuple, Union, Literal
 from ip_adapter.ip_adapter import Resampler
-
+import requests
 import argparse
 import logging
 import os
@@ -65,6 +65,11 @@ def parse_args():
 
 
     return args
+
+
+
+
+
 
 def pil_to_tensor(images):
     images = np.array(images).astype(np.float32) / 255.0
@@ -200,6 +205,8 @@ class VitonHDTestDataset(data.Dataset):
 
 def main():
     args = parse_args()
+ 
+
     accelerator_project_config = ProjectConfiguration(project_dir=args.output_dir)
     accelerator = Accelerator(
         mixed_precision=args.mixed_precision,
