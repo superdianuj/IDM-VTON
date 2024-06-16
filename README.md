@@ -17,6 +17,8 @@ conda activate idm
 ```bash
 python convert_url_2_img.py --url <link to Amazon website of garment product>
 python try_on.py --image_path <path to image on why garment is to be tried on>
+
+# results are saved as result.jpg and mask.jpg in current directory
 ```
 
 
