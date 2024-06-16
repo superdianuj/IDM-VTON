@@ -1,6 +1,6 @@
 
 <div align="center">
-<h1>IDM-VTON: Improving Diffusion Models for Authentic Virtual Try-on in the Wild</h1>
+<h1>IDM-VTON: Trying on Garments on Image of Person directly from Shopping Site URL </h1>
 
 
 ## Setup
