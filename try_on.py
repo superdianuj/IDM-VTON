@@ -24,6 +24,7 @@ from preprocess.openpose.run_openpose import OpenPose
 from detectron2.data.detection_utils import convert_PIL_to_numpy, _apply_exif_orientation
 from torchvision.transforms.functional import to_pil_image
 import gc
+import argparse
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print(f'Using device: {device}')  # Confirm device being used
@@ -229,8 +230,13 @@ def start_tryon(pipe, parsing_model, openpose_model, human_img, garm_img, garmen
         return images[0], mask_gray
 
 if __name__ == "__main__":
-    human_img_path = 'im1.jpg'
-    garm_img_path = 'im2.jpg'
+    
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--image_path', type=str, help='Path to the image of the person to try on')
+    args=parser.parse_args()
+
+    human_img_path = args.image_path
+    garm_img_path = 'segmented_garment.png'
     garment_des = "Short Sleeve Round Neck T-shirts"
     is_checked = True
     is_checked_crop = False
